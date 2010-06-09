@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D8B63011BF0EBE00F59321 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D8B62F11BF0EBE00F59321 /* Growl.framework */; };
+		46D8B64D11BF120400F59321 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46D8B62F11BF0EBE00F59321 /* Growl.framework */; };
 		696F5BED1051D32E0085FA8D /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696F5BEA1051D32E0085FA8D /* About.xib */; };
 		696F5BEE1051D32E0085FA8D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696F5BEB1051D32E0085FA8D /* MainMenu.xib */; };
 		696F5BEF1051D32E0085FA8D /* Stats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696F5BEC1051D32E0085FA8D /* Stats.xib */; };
@@ -65,10 +67,8 @@
 		69F2076A105335B600F77A21 /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F20769105335B600F77A21 /* SystemUIPlugin.framework */; };
 		69F2078110533B7300F77A21 /* PomodoroMenuExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2078010533B7300F77A21 /* PomodoroMenuExtra.m */; };
 		69F2078410533B9300F77A21 /* PomodoroMenuExtraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2078310533B9300F77A21 /* PomodoroMenuExtraView.m */; };
-		69FE2FC11105E81500A1D711 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FE2FC01105E81500A1D711 /* Growl.framework */; };
 		69FE2FD01105E82700A1D711 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FE2FCF1105E82700A1D711 /* Sparkle.framework */; };
 		69FE2FD91105E82A00A1D711 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69FE2FCF1105E82700A1D711 /* Sparkle.framework */; };
-		69FE30031105EB3E00A1D711 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69FE2FC01105E81500A1D711 /* Growl.framework */; };
 		69FE30CE1105F11000A1D711 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */; };
 		69FE30CF1105F11400A1D711 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */; };
 		69FE30E511065F2200A1D711 /* pomodoro_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FE30E211065F2200A1D711 /* pomodoro_n.png */; };
@@ -87,9 +87,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				46D8B64D11BF120400F59321 /* Growl.framework in CopyFiles */,
 				698EDB7F110720C7003DEEB2 /* ShortcutRecorder.framework in CopyFiles */,
 				69FE30CF1105F11400A1D711 /* BGHUDAppKit.framework in CopyFiles */,
-				69FE30031105EB3E00A1D711 /* Growl.framework in CopyFiles */,
 				69FE2FD91105E82A00A1D711 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +104,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		46D8B62F11BF0EBE00F59321 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "/Users/Russell/Development/Projects/pomodoro-save/Growl.framework"; sourceTree = "<absolute>"; };
 		696F5BEA1051D32E0085FA8D /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = About.xib; path = ../About.xib; sourceTree = SOURCE_ROOT; };
 		696F5BEB1051D32E0085FA8D /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		696F5BEC1051D32E0085FA8D /* Stats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Stats.xib; path = ../Stats.xib; sourceTree = SOURCE_ROOT; };
@@ -163,9 +164,9 @@
 		696F5C411051D4360085FA8D /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = appcast.xml; path = ../appcast.xml; sourceTree = SOURCE_ROOT; };
 		696F5C421051D4360085FA8D /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = ../green.png; sourceTree = SOURCE_ROOT; };
 		696F5C431051D4360085FA8D /* Pomodoro-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Pomodoro-License.txt"; path = "../Pomodoro-License.txt"; sourceTree = SOURCE_ROOT; };
-		696F5C441051D4360085FA8D /* pomodoro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoro.png; path = /Users/ugol/Documents/Source/objective/pomodoro/pomodoro.png; sourceTree = "<absolute>"; };
-		696F5C451051D4360085FA8D /* pomodoroBreak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroBreak.png; path = /Users/ugol/Documents/Source/objective/pomodoro/pomodoroBreak.png; sourceTree = "<absolute>"; };
-		696F5C461051D4360085FA8D /* pomodoroFreeze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroFreeze.png; path = /Users/ugol/Documents/Source/objective/pomodoro/pomodoroFreeze.png; sourceTree = "<absolute>"; };
+		696F5C441051D4360085FA8D /* pomodoro.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = pomodoro.png; path = ../pomodoro.png; sourceTree = "<group>"; };
+		696F5C451051D4360085FA8D /* pomodoroBreak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroBreak.png; path = ../pomodoroBreak.png; sourceTree = "<group>"; };
+		696F5C461051D4360085FA8D /* pomodoroFreeze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroFreeze.png; path = ../pomodoroFreeze.png; sourceTree = "<group>"; };
 		696F5C471051D4360085FA8D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = SOURCE_ROOT; };
 		696F5C481051D4360085FA8D /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = ../red.png; sourceTree = SOURCE_ROOT; };
 		696F5C491051D4360085FA8D /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReleaseNotes.txt; path = ../ReleaseNotes.txt; sourceTree = SOURCE_ROOT; };
@@ -183,7 +184,7 @@
 		69D16FA01053C1E10051AC93 /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTKeyCombo.h; path = ../PTKeyCombo.h; sourceTree = SOURCE_ROOT; };
 		69D16FA11053C1E10051AC93 /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTKeyCombo.m; path = ../PTKeyCombo.m; sourceTree = SOURCE_ROOT; };
 		69DCEE9E1105B00400F48F37 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../icon.icns; sourceTree = SOURCE_ROOT; };
-		69E9323D1052957F00A45035 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = /Users/ugol/Documents/Source/objective/pomodoro/ShortcutRecorder.framework; sourceTree = "<absolute>"; };
+		69E9323D1052957F00A45035 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ShortcutRecorder.framework; path = ../../shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		69F206B71053185C00F77A21 /* MGTwitterEngine-License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "MGTwitterEngine-License.rtf"; path = "../MGTwitterEngine-License.rtf"; sourceTree = SOURCE_ROOT; };
 		69F206B81053185C00F77A21 /* ShortcutRecorder-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "ShortcutRecorder-License.txt"; path = "../ShortcutRecorder-License.txt"; sourceTree = SOURCE_ROOT; };
 		69F206B91053185C00F77A21 /* Sounds-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Sounds-License.txt"; path = "../Sounds-License.txt"; sourceTree = SOURCE_ROOT; };
@@ -197,9 +198,8 @@
 		69F2078010533B7300F77A21 /* PomodoroMenuExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PomodoroMenuExtra.m; sourceTree = "<group>"; };
 		69F2078210533B9300F77A21 /* PomodoroMenuExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomodoroMenuExtraView.h; sourceTree = "<group>"; };
 		69F2078310533B9300F77A21 /* PomodoroMenuExtraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PomodoroMenuExtraView.m; sourceTree = "<group>"; };
-		69FE2FC01105E81500A1D711 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ../Growl.framework; sourceTree = SOURCE_ROOT; };
 		69FE2FCF1105E82700A1D711 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
-		69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../bghud/BGHUDAppKit/build/Debug/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
+		69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
 		69FE30E211065F2200A1D711 /* pomodoro_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoro_n.png; path = ../pomodoro_n.png; sourceTree = "<group>"; };
 		69FE30E311065F2200A1D711 /* pomodoroBreak_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroBreak_n.png; path = ../pomodoroBreak_n.png; sourceTree = "<group>"; };
 		69FE30E411065F2200A1D711 /* pomodoroFreeze_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroFreeze_n.png; path = ../pomodoroFreeze_n.png; sourceTree = "<group>"; };
@@ -213,7 +213,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FE2FC11105E81500A1D711 /* Growl.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				696F5C7D1051D6D10085FA8D /* Carbon.framework in Frameworks */,
 				696F5D9B1051D7200085FA8D /* libxml2.dylib in Frameworks */,
@@ -221,6 +220,7 @@
 				69F2076A105335B600F77A21 /* SystemUIPlugin.framework in Frameworks */,
 				69FE2FD01105E82700A1D711 /* Sparkle.framework in Frameworks */,
 				69FE30CE1105F11000A1D711 /* BGHUDAppKit.framework in Frameworks */,
+				46D8B63011BF0EBE00F59321 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +253,14 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46D8B62F11BF0EBE00F59321 /* Growl.framework */,
+				69E9323D1052957F00A45035 /* ShortcutRecorder.framework */,
 				69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */,
 				69FE2FCF1105E82700A1D711 /* Sparkle.framework */,
-				69FE2FC01105E81500A1D711 /* Growl.framework */,
 				696F5D9A1051D7200085FA8D /* libxml2.dylib */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-				69E9323D1052957F00A45035 /* ShortcutRecorder.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -642,16 +642,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../../Sparkle 1\"",
 					"\"$(SRCROOT)/..\"",
-					"\"$(SRCROOT)/../../bghud/BGHUDAppKit/build/Release\"",
-					"\"$(SRCROOT)/../../../../../Desktop/tmp/growl SDK\"",
-					"\"$(SRCROOT)/../../pomodoro.leopard\"",
+					"\"$(SRCROOT)/../BGHUDAppKit.framework\"",
+					"\"$(SRCROOT)/../Growl.framework\"",
+					"\"$(SRCROOT)/../Sparkle.framework\"",
+					"\"$(SRCROOT)/../ShortcutRecorder.framework\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
-					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)/../../../../../Desktop/work/pomodoro/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)/../../../../../Desktop/work/pomodoro\"",
-					"\"$(SRCROOT)/../../bghud/BGHUDAppKit/build/Debug\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -681,16 +677,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../../Sparkle 1\"",
 					"\"$(SRCROOT)/..\"",
-					"\"$(SRCROOT)/../../bghud/BGHUDAppKit/build/Release\"",
-					"\"$(SRCROOT)/../../../../../Desktop/tmp/growl SDK\"",
-					"\"$(SRCROOT)/../../pomodoro.leopard\"",
+					"\"$(SRCROOT)/../BGHUDAppKit.framework\"",
+					"\"$(SRCROOT)/../Growl.framework\"",
+					"\"$(SRCROOT)/../Sparkle.framework\"",
+					"\"$(SRCROOT)/../ShortcutRecorder.framework\"",
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
-					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)/../../../../../Desktop/work/pomodoro/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)/../../../../../Desktop/work/pomodoro\"",
-					"\"$(SRCROOT)/../../bghud/BGHUDAppKit/build/Debug\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -719,6 +711,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -729,8 +722,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
