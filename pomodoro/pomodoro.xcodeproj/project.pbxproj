@@ -104,7 +104,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		46D8B62F11BF0EBE00F59321 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "/Users/Russell/Development/Projects/pomodoro-save/Growl.framework"; sourceTree = "<absolute>"; };
+		46D8B62F11BF0EBE00F59321 /* Growl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Growl.framework; path = ../Growl.framework; sourceTree = SOURCE_ROOT; };
 		696F5BEA1051D32E0085FA8D /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = About.xib; path = ../About.xib; sourceTree = SOURCE_ROOT; };
 		696F5BEB1051D32E0085FA8D /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		696F5BEC1051D32E0085FA8D /* Stats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Stats.xib; path = ../Stats.xib; sourceTree = SOURCE_ROOT; };
@@ -184,7 +184,7 @@
 		69D16FA01053C1E10051AC93 /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTKeyCombo.h; path = ../PTKeyCombo.h; sourceTree = SOURCE_ROOT; };
 		69D16FA11053C1E10051AC93 /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTKeyCombo.m; path = ../PTKeyCombo.m; sourceTree = SOURCE_ROOT; };
 		69DCEE9E1105B00400F48F37 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ../icon.icns; sourceTree = SOURCE_ROOT; };
-		69E9323D1052957F00A45035 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ShortcutRecorder.framework; path = ../../shortcutrecorder/build/Release/ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
+		69E9323D1052957F00A45035 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ShortcutRecorder.framework; path = ../ShortcutRecorder.framework; sourceTree = SOURCE_ROOT; };
 		69F206B71053185C00F77A21 /* MGTwitterEngine-License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "MGTwitterEngine-License.rtf"; path = "../MGTwitterEngine-License.rtf"; sourceTree = SOURCE_ROOT; };
 		69F206B81053185C00F77A21 /* ShortcutRecorder-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "ShortcutRecorder-License.txt"; path = "../ShortcutRecorder-License.txt"; sourceTree = SOURCE_ROOT; };
 		69F206B91053185C00F77A21 /* Sounds-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Sounds-License.txt"; path = "../Sounds-License.txt"; sourceTree = SOURCE_ROOT; };
@@ -199,7 +199,7 @@
 		69F2078210533B9300F77A21 /* PomodoroMenuExtraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomodoroMenuExtraView.h; sourceTree = "<group>"; };
 		69F2078310533B9300F77A21 /* PomodoroMenuExtraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PomodoroMenuExtraView.m; sourceTree = "<group>"; };
 		69FE2FCF1105E82700A1D711 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
-		69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../../BGHUDAppKit/build/Release/BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
+		69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BGHUDAppKit.framework; path = ../BGHUDAppKit.framework; sourceTree = SOURCE_ROOT; };
 		69FE30E211065F2200A1D711 /* pomodoro_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoro_n.png; path = ../pomodoro_n.png; sourceTree = "<group>"; };
 		69FE30E311065F2200A1D711 /* pomodoroBreak_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroBreak_n.png; path = ../pomodoroBreak_n.png; sourceTree = "<group>"; };
 		69FE30E411065F2200A1D711 /* pomodoroFreeze_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pomodoroFreeze_n.png; path = ../pomodoroFreeze_n.png; sourceTree = "<group>"; };
@@ -517,7 +517,11 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "pomodoro" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* pomodoro */;
 			projectDirPath = "";
 			projectRoot = "";
