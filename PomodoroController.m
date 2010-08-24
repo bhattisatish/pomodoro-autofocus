@@ -681,6 +681,42 @@
 	[twitterProgress startAnimation:self];
 }
 
+#pragma mark ---- Tags handling ----
+- (void)saveTagsToDefaults {
+	[[NSUserDefaults standardUserDefaults] setObject:tags forKey:@"pomodoroTags"];	
+}
+
+-(IBAction) addTag: (id) sender {
+	[tags addObject:@"Untitled"];
+    [tagsTable reloadData];
+    [tagsTable selectRow:([tags count] - 1) byExtendingSelection:NO];
+    [tagsTable editColumn:0 row:([tags count] - 1) withEvent:nil select:YES];
+}
+
+-(IBAction) removeTag: (id) sender {
+	if ([tagsTable selectedRow] < 0 || [tagsTable selectedRow] >= [tags count])
+		return;
+	[tags removeObjectAtIndex:[tagsTable selectedRow]];
+	[tagsTable reloadData];
+    [self saveTagsToDefaults];	
+}
+
+- (int)numberOfRowsInTableView:(NSTableView *)tableView {
+    return [tags count];
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn
+			row:(int)row {
+    return [tags objectAtIndex:row];
+}
+
+- (void)tableView:(NSTableView *)aTableView setObjectValue:(id)anObject
+   forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
+    [tags replaceObjectAtIndex:rowIndex withObject:anObject];
+    [self saveTagsToDefaults];	
+}
+
+
 #pragma mark ---- Lifecycle methods ----
 
 + (void)initialize { 
@@ -690,7 +726,6 @@
 //									forName:@"PercentageTransformer"];
 
 	[PomodoroDefaults setDefaults];
-	
 } 
 
 
@@ -715,12 +750,15 @@
 	
 }
 
+-(void)loadTags{
+	tags = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"pomodoroTags"] mutableCopy];
+}
+
 -(IBAction) resetDefaultValues: (id) sender {
-	
 	[PomodoroDefaults removeDefaults];
 	[self updateShortcuts];
 	[self showTimeOnStatusBar: _initialTime * 60];
-		
+	[self loadTags];
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
@@ -820,8 +858,6 @@
 
 	[self updateShortcuts];
 
-	
-
 	[pomodoro setDelegate: self];
 	GetCurrentProcess(&psn);
 	
@@ -831,7 +867,8 @@
 	[self observeUserDefault:@"voiceVolume"];
 	
 	twitterEngine = [[MGTwitterEngine alloc] initWithDelegate:self];
-		
+
+	[self loadTags];
 }
 
 -(void)dealloc {
@@ -871,6 +908,10 @@
 	[twitterEngine release];
 	[twitterTest release];
 	[twitterProgress release];
+	
+	[addTag release];
+	[removeTag release];
+	[tags release];
 	
 	[super dealloc];
 }

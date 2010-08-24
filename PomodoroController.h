@@ -24,6 +24,7 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 #import "MGTwitterEngine.h"
 #import "ShortcutRecorder.framework/Headers/SRRecorderControl.h"
 
@@ -50,7 +51,7 @@
 @class PomodoroMenuExtra;
 @class PTHotKey;
 
-@interface PomodoroController : NSObject <MGTwitterEngineDelegate> {
+@interface PomodoroController : NSObject <MGTwitterEngineDelegate, NSTableViewDataSource> {
 
 	ProcessSerialNumber psn;
 	AboutController* about;
@@ -81,6 +82,10 @@
 	IBOutlet NSButton* twitterTest;
 	IBOutlet NSProgressIndicator* twitterProgress;
 	IBOutlet NSImageView* twitterStatus;
+	
+	IBOutlet NSButton* addTag;
+	IBOutlet NSButton* removeTag;	
+	IBOutlet NSTableView* tagsTable;
 	
 	IBOutlet SRRecorderControl* muteRecorder;
 	IBOutlet SRRecorderControl* startRecorder;
@@ -122,6 +127,8 @@
 	PomodoroStats* pomoStats;
 	
 	MGTwitterEngine* twitterEngine;
+	
+	NSMutableArray* tags;
 		
 }
 
@@ -129,6 +136,8 @@
 @property (nonatomic, readonly) NSMenuItem* interruptPomodoro;
 @property (nonatomic, readonly) NSMenuItem* invalidatePomodoro;
 @property (nonatomic, readonly) NSMenuItem* resumePomodoro;
+
+@property (nonatomic, readonly) NSTableColumn* tagsColumn;
 
 -(void) pomodoroStarted;
 
@@ -156,5 +165,9 @@
 -(IBAction) resetDefaultValues: (id) sender;
 
 -(IBAction) testTwitterConnection: (id) sender;
+
+-(IBAction) addTag: (id) sender;
+-(IBAction) removeTag: (id) sender;
+
 
 @end

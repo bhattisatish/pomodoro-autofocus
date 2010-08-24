@@ -137,6 +137,9 @@
 	[defaultValues setObject:[NSNumber numberWithInt:2] forKey:@"tickVolume"];
 		
 	[defaultValues setObject:@"Insert here the pomodoro name" forKey:@"pomodoroName"];
+	
+	[defaultValues setObject:[NSArray array] forKey:@"pomodoroTags"];	
+	
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 
 }
@@ -263,6 +266,8 @@
 	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"tickVolume"];
 	
 	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"autoPomodoroRestart"];
+
+	[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"pomodoroTags"];
 }
 
 @end
