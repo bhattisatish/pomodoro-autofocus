@@ -79,7 +79,85 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B4068CCE12265EC00043723D /* TagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4068CCD12265EC00043723D /* TagsController.m */; };
+		B41978F61226AB0E00B59CCA /* ProvaScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = B41978F51226AB0E00B59CCA /* ProvaScenario.m */; };
+		B41979001226AB5D00B59CCA /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BF11051D3A30085FA8D /* AboutController.m */; };
+		B41979011226AB5D00B59CCA /* Binder.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BF31051D3A30085FA8D /* Binder.m */; };
+		B41979021226AB5D00B59CCA /* DurationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BF51051D3A30085FA8D /* DurationFormatter.m */; };
+		B41979031226AB5D00B59CCA /* GrowlNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BF71051D3A30085FA8D /* GrowlNotifier.m */; };
+		B41979041226AB5D00B59CCA /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BF91051D3A30085FA8D /* MGTwitterEngine.m */; };
+		B41979051226AB5D00B59CCA /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BFD1051D3A30085FA8D /* MGTwitterHTTPURLConnection.m */; };
+		B41979061226AB5D00B59CCA /* MGTwitterLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5BFF1051D3A30085FA8D /* MGTwitterLibXMLParser.m */; };
+		B41979071226AB5D00B59CCA /* MGTwitterMessagesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C011051D3A30085FA8D /* MGTwitterMessagesLibXMLParser.m */; };
+		B41979081226AB5D00B59CCA /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C031051D3A30085FA8D /* MGTwitterMessagesParser.m */; };
+		B41979091226AB5D00B59CCA /* MGTwitterMiscLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C051051D3A30085FA8D /* MGTwitterMiscLibXMLParser.m */; };
+		B419790A1226AB5D00B59CCA /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C071051D3A30085FA8D /* MGTwitterMiscParser.m */; };
+		B419790B1226AB5D00B59CCA /* MGTwitterStatusesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C0B1051D3A30085FA8D /* MGTwitterStatusesLibXMLParser.m */; };
+		B419790C1226AB5D00B59CCA /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C0D1051D3A30085FA8D /* MGTwitterStatusesParser.m */; };
+		B419790D1226AB5D00B59CCA /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C0F1051D3A30085FA8D /* MGTwitterUsersLibXMLParser.m */; };
+		B419790E1226AB5D00B59CCA /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C111051D3A30085FA8D /* MGTwitterUsersParser.m */; };
+		B419790F1226AB5D00B59CCA /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C131051D3A30085FA8D /* MGTwitterXMLParser.m */; };
+		B41979101226AB5D00B59CCA /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C151051D3A30085FA8D /* NSData+Base64.m */; };
+		B41979111226AB5D00B59CCA /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C171051D3A30085FA8D /* NSString+UUID.m */; };
+		B41979121226AB5D00B59CCA /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C191051D3A30085FA8D /* Pomodoro.m */; };
+		B41979131226AB5D00B59CCA /* PomodoroArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C1B1051D3A30085FA8D /* PomodoroArrayController.m */; };
+		B41979141226AB5D00B59CCA /* PomodoroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C1D1051D3A30085FA8D /* PomodoroController.m */; };
+		B41979151226AB5D00B59CCA /* PomodoroDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C1F1051D3A30085FA8D /* PomodoroDefaults.m */; };
+		B41979161226AB5D00B59CCA /* PomodoroStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C211051D3A30085FA8D /* PomodoroStats.m */; };
+		B41979171226AB5D00B59CCA /* StatsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C231051D3A30085FA8D /* StatsController.m */; };
+		B41979181226AB5D00B59CCA /* Pomodoros.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 696F5C6A1051D51F0085FA8D /* Pomodoros.xcdatamodel */; };
+		B41979191226AB5D00B59CCA /* PomodoroMenuExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2078010533B7300F77A21 /* PomodoroMenuExtra.m */; };
+		B419791A1226AB5D00B59CCA /* PomodoroMenuExtraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2078310533B9300F77A21 /* PomodoroMenuExtraView.m */; };
+		B419791B1226AB5D00B59CCA /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D16F9B1053C1E10051AC93 /* PTHotKey.m */; };
+		B419791C1226AB5D00B59CCA /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D16F9D1053C1E10051AC93 /* PTHotKeyCenter.m */; };
+		B419791D1226AB5D00B59CCA /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D16F9F1053C1E10051AC93 /* PTKeyCodeTranslator.m */; };
+		B419791E1226AB5D00B59CCA /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D16FA11053C1E10051AC93 /* PTKeyCombo.m */; };
+		B419791F1226AB5D00B59CCA /* TagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4068CCD12265EC00043723D /* TagsController.m */; };
+		B41979271226AB8E00B59CCA /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D8B62F11BF0EBE00F59321 /* Growl.framework */; };
+		B419792A1226ABA000B59CCA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 696F5D9A1051D7200085FA8D /* libxml2.dylib */; };
+		B419792F1226ABE800B59CCA /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F20769105335B600F77A21 /* SystemUIPlugin.framework */; };
+		B419793A1226ABFB00B59CCA /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E9323D1052957F00A45035 /* ShortcutRecorder.framework */; };
+		B41979471226AC1D00B59CCA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FE2FCF1105E82700A1D711 /* Sparkle.framework */; };
+		B4197A251226AC3600B59CCA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B4197A261226AC3600B59CCA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696F5C7C1051D6D10085FA8D /* Carbon.framework */; };
+		B4197A481226B38800B59CCA /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46D8B62F11BF0EBE00F59321 /* Growl.framework */; };
+		B4197A491226B38800B59CCA /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69E9323D1052957F00A45035 /* ShortcutRecorder.framework */; };
+		B4197A4A1226B38800B59CCA /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69FE30CD1105F11000A1D711 /* BGHUDAppKit.framework */; };
+		B4197A4B1226B38800B59CCA /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69FE2FCF1105E82700A1D711 /* Sparkle.framework */; };
+		B4197A8A1226BB1500B59CCA /* NSException_SenTestFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A5D1226BB1500B59CCA /* NSException_SenTestFailure.m */; };
+		B4197A8B1226BB1500B59CCA /* NSInvocation_SenTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A5F1226BB1500B59CCA /* NSInvocation_SenTesting.m */; };
+		B4197A8C1226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A611226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.m */; };
+		B4197A8F1226BB1500B59CCA /* SenInterfaceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A651226BB1500B59CCA /* SenInterfaceTestCase.m */; };
+		B4197A911226BB1500B59CCA /* SenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A681226BB1500B59CCA /* SenTest.m */; };
+		B4197A921226BB1500B59CCA /* SenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A6B1226BB1500B59CCA /* SenTestCase.m */; };
+		B4197A931226BB1500B59CCA /* SenTestCaseRun.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A6D1226BB1500B59CCA /* SenTestCaseRun.m */; };
+		B4197A941226BB1500B59CCA /* SenTestClassEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A6F1226BB1500B59CCA /* SenTestClassEnumerator.m */; };
+		B4197A951226BB1500B59CCA /* SenTestDistributedNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A721226BB1500B59CCA /* SenTestDistributedNotifier.m */; };
+		B4197A961226BB1500B59CCA /* SenTestingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A791226BB1500B59CCA /* SenTestingUtilities.m */; };
+		B4197A971226BB1500B59CCA /* SenTestInvocationEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A7B1226BB1500B59CCA /* SenTestInvocationEnumerator.m */; };
+		B4197A981226BB1500B59CCA /* SenTestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A7D1226BB1500B59CCA /* SenTestLog.m */; };
+		B4197A991226BB1500B59CCA /* SenTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A7F1226BB1500B59CCA /* SenTestObserver.m */; };
+		B4197A9A1226BB1500B59CCA /* SenTestProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A811226BB1500B59CCA /* SenTestProbe.m */; };
+		B4197A9B1226BB1500B59CCA /* SenTestRun.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A831226BB1500B59CCA /* SenTestRun.m */; };
+		B4197A9C1226BB1500B59CCA /* SenTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A851226BB1500B59CCA /* SenTestSuite.m */; };
+		B4197A9D1226BB1500B59CCA /* SenTestSuiteRun.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A871226BB1500B59CCA /* SenTestSuiteRun.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4197AA11226BB1500B59CCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4197A751226BB1500B59CCA /* SenTestingKit.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* SenTestingKit.framework */;
+			remoteInfo = SenTestingKit;
+		};
+		B4197AA31226BB1500B59CCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4197A751226BB1500B59CCA /* SenTestingKit.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = E98E64A5056D17830033599A /* SenTestingKit_UnitTests.framework */;
+			remoteInfo = SenTestingKit_UnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		696F5DA71051D80A0085FA8D /* CopyFiles */ = {
@@ -92,6 +170,19 @@
 				698EDB7F110720C7003DEEB2 /* ShortcutRecorder.framework in CopyFiles */,
 				69FE30CF1105F11400A1D711 /* BGHUDAppKit.framework in CopyFiles */,
 				69FE2FD91105E82A00A1D711 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4197A4E1226B3A600B59CCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4197A481226B38800B59CCA /* Growl.framework in CopyFiles */,
+				B4197A491226B38800B59CCA /* ShortcutRecorder.framework in CopyFiles */,
+				B4197A4A1226B38800B59CCA /* BGHUDAppKit.framework in CopyFiles */,
+				B4197A4B1226B38800B59CCA /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +300,63 @@
 		8D1107320486CEB800E47090 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4068CCC12265EC00043723D /* TagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsController.h; sourceTree = "<group>"; };
 		B4068CCD12265EC00043723D /* TagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsController.m; sourceTree = "<group>"; };
+		B4068DB0122693250043723D /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
+		B4068DB5122693870043723D /* TagsManagementSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagsManagementSpec.h; path = ../UnitTest/TagsManagementSpec.h; sourceTree = SOURCE_ROOT; };
+		B4068DB6122693870043723D /* TagsManagementSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagsManagementSpec.m; path = ../UnitTest/TagsManagementSpec.m; sourceTree = SOURCE_ROOT; };
+		B4068DE81226950D0043723D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B4068DEC122695370043723D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		B4068DEE122695370043723D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B4068EB312269BB10043723D /* TagsSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagsSpec.h; path = ../UnitTest/TagsSpec.h; sourceTree = SOURCE_ROOT; };
+		B4068EB412269BB10043723D /* TagsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagsSpec.m; path = ../UnitTest/TagsSpec.m; sourceTree = SOURCE_ROOT; };
+		B406902F1226A2880043723D /* FakeUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FakeUnitTest-Info.plist"; sourceTree = "<group>"; };
+		B41978EB1226AAD100B59CCA /* UnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41978F41226AB0E00B59CCA /* ProvaScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvaScenario.h; sourceTree = "<group>"; };
+		B41978F51226AB0E00B59CCA /* ProvaScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvaScenario.m; sourceTree = "<group>"; };
+		B4197A5A1226BB1500B59CCA /* h.template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = h.template; path = ../SenTestingKit/h.template; sourceTree = SOURCE_ROOT; };
+		B4197A5B1226BB1500B59CCA /* m.template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = m.template; path = ../SenTestingKit/m.template; sourceTree = SOURCE_ROOT; };
+		B4197A5C1226BB1500B59CCA /* NSException_SenTestFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSException_SenTestFailure.h; path = ../SenTestingKit/NSException_SenTestFailure.h; sourceTree = SOURCE_ROOT; };
+		B4197A5D1226BB1500B59CCA /* NSException_SenTestFailure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSException_SenTestFailure.m; path = ../SenTestingKit/NSException_SenTestFailure.m; sourceTree = SOURCE_ROOT; };
+		B4197A5E1226BB1500B59CCA /* NSInvocation_SenTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSInvocation_SenTesting.h; path = ../SenTestingKit/NSInvocation_SenTesting.h; sourceTree = SOURCE_ROOT; };
+		B4197A5F1226BB1500B59CCA /* NSInvocation_SenTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSInvocation_SenTesting.m; path = ../SenTestingKit/NSInvocation_SenTesting.m; sourceTree = SOURCE_ROOT; };
+		B4197A601226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSObject_SenTestRuntimeUtilities.h; path = ../SenTestingKit/NSObject_SenTestRuntimeUtilities.h; sourceTree = SOURCE_ROOT; };
+		B4197A611226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSObject_SenTestRuntimeUtilities.m; path = ../SenTestingKit/NSObject_SenTestRuntimeUtilities.m; sourceTree = SOURCE_ROOT; };
+		B4197A621226BB1500B59CCA /* OpenSourceLicense.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = OpenSourceLicense.html; path = ../SenTestingKit/OpenSourceLicense.html; sourceTree = SOURCE_ROOT; };
+		B4197A631226BB1500B59CCA /* PB.project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PB.project; path = ../SenTestingKit/PB.project; sourceTree = SOURCE_ROOT; };
+		B4197A641226BB1500B59CCA /* SenInterfaceTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenInterfaceTestCase.h; path = ../SenTestingKit/SenInterfaceTestCase.h; sourceTree = SOURCE_ROOT; };
+		B4197A651226BB1500B59CCA /* SenInterfaceTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenInterfaceTestCase.m; path = ../SenTestingKit/SenInterfaceTestCase.m; sourceTree = SOURCE_ROOT; };
+		B4197A661226BB1500B59CCA /* sente.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sente.gif; path = ../SenTestingKit/sente.gif; sourceTree = SOURCE_ROOT; };
+		B4197A671226BB1500B59CCA /* SenTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTest.h; path = ../SenTestingKit/SenTest.h; sourceTree = SOURCE_ROOT; };
+		B4197A681226BB1500B59CCA /* SenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTest.m; path = ../SenTestingKit/SenTest.m; sourceTree = SOURCE_ROOT; };
+		B4197A691226BB1500B59CCA /* SenTestCase_Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestCase_Macros.h; path = ../SenTestingKit/SenTestCase_Macros.h; sourceTree = SOURCE_ROOT; };
+		B4197A6A1226BB1500B59CCA /* SenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestCase.h; path = ../SenTestingKit/SenTestCase.h; sourceTree = SOURCE_ROOT; };
+		B4197A6B1226BB1500B59CCA /* SenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestCase.m; path = ../SenTestingKit/SenTestCase.m; sourceTree = SOURCE_ROOT; };
+		B4197A6C1226BB1500B59CCA /* SenTestCaseRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestCaseRun.h; path = ../SenTestingKit/SenTestCaseRun.h; sourceTree = SOURCE_ROOT; };
+		B4197A6D1226BB1500B59CCA /* SenTestCaseRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestCaseRun.m; path = ../SenTestingKit/SenTestCaseRun.m; sourceTree = SOURCE_ROOT; };
+		B4197A6E1226BB1500B59CCA /* SenTestClassEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestClassEnumerator.h; path = ../SenTestingKit/SenTestClassEnumerator.h; sourceTree = SOURCE_ROOT; };
+		B4197A6F1226BB1500B59CCA /* SenTestClassEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestClassEnumerator.m; path = ../SenTestingKit/SenTestClassEnumerator.m; sourceTree = SOURCE_ROOT; };
+		B4197A701226BB1500B59CCA /* SenTestDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestDefines.h; path = ../SenTestingKit/SenTestDefines.h; sourceTree = SOURCE_ROOT; };
+		B4197A711226BB1500B59CCA /* SenTestDistributedNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestDistributedNotifier.h; path = ../SenTestingKit/SenTestDistributedNotifier.h; sourceTree = SOURCE_ROOT; };
+		B4197A721226BB1500B59CCA /* SenTestDistributedNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestDistributedNotifier.m; path = ../SenTestingKit/SenTestDistributedNotifier.m; sourceTree = SOURCE_ROOT; };
+		B4197A731226BB1500B59CCA /* SenTestingKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestingKit_Prefix.pch; path = ../SenTestingKit/SenTestingKit_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		B4197A741226BB1500B59CCA /* SenTestingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestingKit.h; path = ../SenTestingKit/SenTestingKit.h; sourceTree = SOURCE_ROOT; };
+		B4197A751226BB1500B59CCA /* SenTestingKit.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SenTestingKit.xcode; path = ../SenTestingKit/SenTestingKit.xcode; sourceTree = SOURCE_ROOT; };
+		B4197A781226BB1500B59CCA /* SenTestingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestingUtilities.h; path = ../SenTestingKit/SenTestingUtilities.h; sourceTree = SOURCE_ROOT; };
+		B4197A791226BB1500B59CCA /* SenTestingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestingUtilities.m; path = ../SenTestingKit/SenTestingUtilities.m; sourceTree = SOURCE_ROOT; };
+		B4197A7A1226BB1500B59CCA /* SenTestInvocationEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestInvocationEnumerator.h; path = ../SenTestingKit/SenTestInvocationEnumerator.h; sourceTree = SOURCE_ROOT; };
+		B4197A7B1226BB1500B59CCA /* SenTestInvocationEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestInvocationEnumerator.m; path = ../SenTestingKit/SenTestInvocationEnumerator.m; sourceTree = SOURCE_ROOT; };
+		B4197A7C1226BB1500B59CCA /* SenTestLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestLog.h; path = ../SenTestingKit/SenTestLog.h; sourceTree = SOURCE_ROOT; };
+		B4197A7D1226BB1500B59CCA /* SenTestLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestLog.m; path = ../SenTestingKit/SenTestLog.m; sourceTree = SOURCE_ROOT; };
+		B4197A7E1226BB1500B59CCA /* SenTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestObserver.h; path = ../SenTestingKit/SenTestObserver.h; sourceTree = SOURCE_ROOT; };
+		B4197A7F1226BB1500B59CCA /* SenTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestObserver.m; path = ../SenTestingKit/SenTestObserver.m; sourceTree = SOURCE_ROOT; };
+		B4197A801226BB1500B59CCA /* SenTestProbe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestProbe.h; path = ../SenTestingKit/SenTestProbe.h; sourceTree = SOURCE_ROOT; };
+		B4197A811226BB1500B59CCA /* SenTestProbe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestProbe.m; path = ../SenTestingKit/SenTestProbe.m; sourceTree = SOURCE_ROOT; };
+		B4197A821226BB1500B59CCA /* SenTestRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestRun.h; path = ../SenTestingKit/SenTestRun.h; sourceTree = SOURCE_ROOT; };
+		B4197A831226BB1500B59CCA /* SenTestRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestRun.m; path = ../SenTestingKit/SenTestRun.m; sourceTree = SOURCE_ROOT; };
+		B4197A841226BB1500B59CCA /* SenTestSuite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestSuite.h; path = ../SenTestingKit/SenTestSuite.h; sourceTree = SOURCE_ROOT; };
+		B4197A851226BB1500B59CCA /* SenTestSuite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestSuite.m; path = ../SenTestingKit/SenTestSuite.m; sourceTree = SOURCE_ROOT; };
+		B4197A861226BB1500B59CCA /* SenTestSuiteRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestSuiteRun.h; path = ../SenTestingKit/SenTestSuiteRun.h; sourceTree = SOURCE_ROOT; };
+		B4197A871226BB1500B59CCA /* SenTestSuiteRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestSuiteRun.m; path = ../SenTestingKit/SenTestSuiteRun.m; sourceTree = SOURCE_ROOT; };
+		B4197AB81226BE4200B59CCA /* PPP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PPP-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,12 +375,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B41978E81226AAD100B59CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4197A251226AC3600B59CCA /* Cocoa.framework in Frameworks */,
+				B4197A261226AC3600B59CCA /* Carbon.framework in Frameworks */,
+				B41979471226AC1D00B59CCA /* Sparkle.framework in Frameworks */,
+				B419793A1226ABFB00B59CCA /* ShortcutRecorder.framework in Frameworks */,
+				B419792F1226ABE800B59CCA /* SystemUIPlugin.framework in Frameworks */,
+				B419792A1226ABA000B59CCA /* libxml2.dylib in Frameworks */,
+				B41979271226AB8E00B59CCA /* Growl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B4068DB41226933C0043723D /* UnitTest */,
 				69D16F8C1053C1670051AC93 /* PTHotKey */,
 				69F2075A1053340300F77A21 /* NSMenuExtra */,
 				696F5C3F1051D3FA0085FA8D /* Pomodoro */,
@@ -272,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* pomodoro.app */,
+				B41978EB1226AAD100B59CCA /* UnitTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,11 +443,22 @@
 		29B97314FDCFA39411CA2CEA /* pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				B4197A591226BAD800B59CCA /* OCUnit */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				B41978F41226AB0E00B59CCA /* ProvaScenario.h */,
+				B41978F51226AB0E00B59CCA /* ProvaScenario.m */,
+				B4068DB0122693250043723D /* UnitTest-Info.plist */,
+				B4068DE81226950D0043723D /* Cocoa.framework */,
+				B4068DEC122695370043723D /* Carbon.framework */,
+				B4068DEE122695370043723D /* libxml2.dylib */,
+				B4068EB312269BB10043723D /* TagsSpec.h */,
+				B4068EB412269BB10043723D /* TagsSpec.m */,
+				B406902F1226A2880043723D /* FakeUnitTest-Info.plist */,
+				B4197AB81226BE4200B59CCA /* PPP-Info.plist */,
 			);
 			name = pomodoro;
 			sourceTree = "<group>";
@@ -492,6 +667,75 @@
 			name = NSMenuExtra;
 			sourceTree = "<group>";
 		};
+		B4068DB41226933C0043723D /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				B4068DB5122693870043723D /* TagsManagementSpec.h */,
+				B4068DB6122693870043723D /* TagsManagementSpec.m */,
+			);
+			name = UnitTest;
+			sourceTree = "<group>";
+		};
+		B4197A591226BAD800B59CCA /* OCUnit */ = {
+			isa = PBXGroup;
+			children = (
+				B4197A5A1226BB1500B59CCA /* h.template */,
+				B4197A5B1226BB1500B59CCA /* m.template */,
+				B4197A5C1226BB1500B59CCA /* NSException_SenTestFailure.h */,
+				B4197A5D1226BB1500B59CCA /* NSException_SenTestFailure.m */,
+				B4197A5E1226BB1500B59CCA /* NSInvocation_SenTesting.h */,
+				B4197A5F1226BB1500B59CCA /* NSInvocation_SenTesting.m */,
+				B4197A601226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.h */,
+				B4197A611226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.m */,
+				B4197A621226BB1500B59CCA /* OpenSourceLicense.html */,
+				B4197A631226BB1500B59CCA /* PB.project */,
+				B4197A641226BB1500B59CCA /* SenInterfaceTestCase.h */,
+				B4197A651226BB1500B59CCA /* SenInterfaceTestCase.m */,
+				B4197A661226BB1500B59CCA /* sente.gif */,
+				B4197A671226BB1500B59CCA /* SenTest.h */,
+				B4197A681226BB1500B59CCA /* SenTest.m */,
+				B4197A691226BB1500B59CCA /* SenTestCase_Macros.h */,
+				B4197A6A1226BB1500B59CCA /* SenTestCase.h */,
+				B4197A6B1226BB1500B59CCA /* SenTestCase.m */,
+				B4197A6C1226BB1500B59CCA /* SenTestCaseRun.h */,
+				B4197A6D1226BB1500B59CCA /* SenTestCaseRun.m */,
+				B4197A6E1226BB1500B59CCA /* SenTestClassEnumerator.h */,
+				B4197A6F1226BB1500B59CCA /* SenTestClassEnumerator.m */,
+				B4197A701226BB1500B59CCA /* SenTestDefines.h */,
+				B4197A711226BB1500B59CCA /* SenTestDistributedNotifier.h */,
+				B4197A721226BB1500B59CCA /* SenTestDistributedNotifier.m */,
+				B4197A731226BB1500B59CCA /* SenTestingKit_Prefix.pch */,
+				B4197A741226BB1500B59CCA /* SenTestingKit.h */,
+				B4197A751226BB1500B59CCA /* SenTestingKit.xcode */,
+				B4197A781226BB1500B59CCA /* SenTestingUtilities.h */,
+				B4197A791226BB1500B59CCA /* SenTestingUtilities.m */,
+				B4197A7A1226BB1500B59CCA /* SenTestInvocationEnumerator.h */,
+				B4197A7B1226BB1500B59CCA /* SenTestInvocationEnumerator.m */,
+				B4197A7C1226BB1500B59CCA /* SenTestLog.h */,
+				B4197A7D1226BB1500B59CCA /* SenTestLog.m */,
+				B4197A7E1226BB1500B59CCA /* SenTestObserver.h */,
+				B4197A7F1226BB1500B59CCA /* SenTestObserver.m */,
+				B4197A801226BB1500B59CCA /* SenTestProbe.h */,
+				B4197A811226BB1500B59CCA /* SenTestProbe.m */,
+				B4197A821226BB1500B59CCA /* SenTestRun.h */,
+				B4197A831226BB1500B59CCA /* SenTestRun.m */,
+				B4197A841226BB1500B59CCA /* SenTestSuite.h */,
+				B4197A851226BB1500B59CCA /* SenTestSuite.m */,
+				B4197A861226BB1500B59CCA /* SenTestSuiteRun.h */,
+				B4197A871226BB1500B59CCA /* SenTestSuiteRun.m */,
+			);
+			name = OCUnit;
+			sourceTree = "<group>";
+		};
+		B4197A761226BB1500B59CCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4197AA21226BB1500B59CCA /* SenTestingKit.framework */,
+				B4197AA41226BB1500B59CCA /* SenTestingKit_UnitTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -515,6 +759,25 @@
 			productReference = 8D1107320486CEB800E47090 /* pomodoro.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B41978EA1226AAD100B59CCA /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41978FB1226AB0E00B59CCA /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				B4197A4E1226B3A600B59CCA /* CopyFiles */,
+				B41978E61226AAD100B59CCA /* Resources */,
+				B41978E71226AAD100B59CCA /* Sources */,
+				B41978E81226AAD100B59CCA /* Frameworks */,
+				B41978E91226AAD100B59CCA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTest;
+			productName = UnitTest;
+			productReference = B41978EB1226AAD100B59CCA /* UnitTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -528,12 +791,36 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* pomodoro */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B4197A761226BB1500B59CCA /* Products */;
+					ProjectRef = B4197A751226BB1500B59CCA /* SenTestingKit.xcode */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* pomodoro */,
+				B41978EA1226AAD100B59CCA /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B4197AA21226BB1500B59CCA /* SenTestingKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SenTestingKit.framework;
+			remoteRef = B4197AA11226BB1500B59CCA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4197AA41226BB1500B59CCA /* SenTestingKit_UnitTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SenTestingKit_UnitTests.framework;
+			remoteRef = B4197AA31226BB1500B59CCA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -570,6 +857,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B41978E61226AAD100B59CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -585,6 +879,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "rm -fR \"${CONFIGURATION_BUILD_DIR}/${WRAPPER_NAME}/Contents/Frameworks/BGHUDAppKit.framework/Versions/Current/Resources\"";
+		};
+		B41978E91226AAD100B59CCA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -629,6 +936,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B41978E71226AAD100B59CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B41979001226AB5D00B59CCA /* AboutController.m in Sources */,
+				B41979011226AB5D00B59CCA /* Binder.m in Sources */,
+				B41979021226AB5D00B59CCA /* DurationFormatter.m in Sources */,
+				B41979031226AB5D00B59CCA /* GrowlNotifier.m in Sources */,
+				B41979041226AB5D00B59CCA /* MGTwitterEngine.m in Sources */,
+				B41979051226AB5D00B59CCA /* MGTwitterHTTPURLConnection.m in Sources */,
+				B41979061226AB5D00B59CCA /* MGTwitterLibXMLParser.m in Sources */,
+				B41979071226AB5D00B59CCA /* MGTwitterMessagesLibXMLParser.m in Sources */,
+				B41979081226AB5D00B59CCA /* MGTwitterMessagesParser.m in Sources */,
+				B41979091226AB5D00B59CCA /* MGTwitterMiscLibXMLParser.m in Sources */,
+				B419790A1226AB5D00B59CCA /* MGTwitterMiscParser.m in Sources */,
+				B419790B1226AB5D00B59CCA /* MGTwitterStatusesLibXMLParser.m in Sources */,
+				B419790C1226AB5D00B59CCA /* MGTwitterStatusesParser.m in Sources */,
+				B419790D1226AB5D00B59CCA /* MGTwitterUsersLibXMLParser.m in Sources */,
+				B419790E1226AB5D00B59CCA /* MGTwitterUsersParser.m in Sources */,
+				B419790F1226AB5D00B59CCA /* MGTwitterXMLParser.m in Sources */,
+				B41979101226AB5D00B59CCA /* NSData+Base64.m in Sources */,
+				B41979111226AB5D00B59CCA /* NSString+UUID.m in Sources */,
+				B41979121226AB5D00B59CCA /* Pomodoro.m in Sources */,
+				B41979131226AB5D00B59CCA /* PomodoroArrayController.m in Sources */,
+				B41979141226AB5D00B59CCA /* PomodoroController.m in Sources */,
+				B41979151226AB5D00B59CCA /* PomodoroDefaults.m in Sources */,
+				B41979161226AB5D00B59CCA /* PomodoroStats.m in Sources */,
+				B41979171226AB5D00B59CCA /* StatsController.m in Sources */,
+				B41979181226AB5D00B59CCA /* Pomodoros.xcdatamodel in Sources */,
+				B41979191226AB5D00B59CCA /* PomodoroMenuExtra.m in Sources */,
+				B419791A1226AB5D00B59CCA /* PomodoroMenuExtraView.m in Sources */,
+				B419791B1226AB5D00B59CCA /* PTHotKey.m in Sources */,
+				B419791C1226AB5D00B59CCA /* PTHotKeyCenter.m in Sources */,
+				B419791D1226AB5D00B59CCA /* PTKeyCodeTranslator.m in Sources */,
+				B419791E1226AB5D00B59CCA /* PTKeyCombo.m in Sources */,
+				B419791F1226AB5D00B59CCA /* TagsController.m in Sources */,
+				B41978F61226AB0E00B59CCA /* ProvaScenario.m in Sources */,
+				B4197A8A1226BB1500B59CCA /* NSException_SenTestFailure.m in Sources */,
+				B4197A8B1226BB1500B59CCA /* NSInvocation_SenTesting.m in Sources */,
+				B4197A8C1226BB1500B59CCA /* NSObject_SenTestRuntimeUtilities.m in Sources */,
+				B4197A8F1226BB1500B59CCA /* SenInterfaceTestCase.m in Sources */,
+				B4197A911226BB1500B59CCA /* SenTest.m in Sources */,
+				B4197A921226BB1500B59CCA /* SenTestCase.m in Sources */,
+				B4197A931226BB1500B59CCA /* SenTestCaseRun.m in Sources */,
+				B4197A941226BB1500B59CCA /* SenTestClassEnumerator.m in Sources */,
+				B4197A951226BB1500B59CCA /* SenTestDistributedNotifier.m in Sources */,
+				B4197A961226BB1500B59CCA /* SenTestingUtilities.m in Sources */,
+				B4197A971226BB1500B59CCA /* SenTestInvocationEnumerator.m in Sources */,
+				B4197A981226BB1500B59CCA /* SenTestLog.m in Sources */,
+				B4197A991226BB1500B59CCA /* SenTestObserver.m in Sources */,
+				B4197A9A1226BB1500B59CCA /* SenTestProbe.m in Sources */,
+				B4197A9B1226BB1500B59CCA /* SenTestRun.m in Sources */,
+				B4197A9C1226BB1500B59CCA /* SenTestSuite.m in Sources */,
+				B4197A9D1226BB1500B59CCA /* SenTestSuiteRun.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -643,6 +1007,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B41978EC1226AAD100B59CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/../Sparkle.framework\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = "UnitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B41978ED1226AAD100B59CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/../Sparkle.framework\"",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = "UnitTest-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -741,6 +1175,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B41978FB1226AB0E00B59CCA /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41978EC1226AAD100B59CCA /* Debug */,
+				B41978ED1226AAD100B59CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "pomodoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,179 @@
+<HTML><HEAD><TITLE></TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<BR><BR><FONT COLOR="#000066"><H1><A NAME="//apple_ref/occ/cl/NSException (SenTestFailure)">NSException (SenTestFailure)</A></H1></FONT><BR>
+
+
+
+
+
+
+
+	<blockquote><DL><DT><B>Declared In:</B></DT>
+	<DD>NSException_SenTestFailure.h</DD>
+	</DL></blockquote>
+
+<BR><BR>
+
+
+<H2>Category Description</H2>
+No category description.
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Global Variables</H2>
+	<blockquote>
+	
+		
+		<H4>Synopsis:</H4>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestFailureException">SenTestFailureException</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenFailureTypeKey">SenFailureTypeKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenConditionFailure">SenConditionFailure</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenRaiseFailure">SenRaiseFailure</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenEqualityFailure">SenEqualityFailure</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenUnconditionalFailure">SenUnconditionalFailure</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestConditionKey">SenTestConditionKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestEqualityLeftKey">SenTestEqualityLeftKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestEqualityRightKey">SenTestEqualityRightKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestFilenameKey">SenTestFilenameKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestLineNumberKey">SenTestLineNumberKey</A></B>;</CODE><BR>
+		
+			<CODE>NSString * const <B><A NAME="//apple_ref/c/data/SenTestDescriptionKey">SenTestDescriptionKey</A></B>;</CODE><BR>
+		
+		
+	
+	</blockquote>
+
+
+
+
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Method Types</H2>
+	<blockquote>
+	
+		
+		<DL><DT></DT>
+		
+			<DD> <A HREF="#- filename">- filename</A></DD>
+		
+			<DD> <A HREF="#- filePathInProject">- filePathInProject</A></DD>
+		
+			<DD> <A HREF="#- lineNumber">- lineNumber</A></DD>
+		
+			<DD> <A HREF="#+ failureInFile:atLine:withDescription:">+ failureInFile:atLine:withDescription:</A></DD>
+		
+			<DD> <A HREF="#+ failureInCondition:isTrue:inFile:atLine:withDescription:">+ failureInCondition:isTrue:inFile:atLine:withDescription:</A></DD>
+		
+			<DD> <A HREF="#+ failureInEqualityBetween:and:inFile:atLine:withDescription:">+ failureInEqualityBetween:and:inFile:atLine:withDescription:</A></DD>
+		
+			<DD> <A HREF="#+ failureInRaise:inFile:atLine:withDescription:">+ failureInRaise:inFile:atLine:withDescription:</A></DD>
+		
+			<DD> <A HREF="#+ failureInRaise:exception:inFile:atLine:withDescription:">+ failureInRaise:exception:inFile:atLine:withDescription:</A></DD>
+		
+		</DL>
+	
+	</blockquote>
+
+
+
+
+	<P><HR WIDTH=50% ALIGN=LEFT>
+	<H2>Class Methods</H2>
+ 
+	
+		
+		<A NAME="+ failureInCondition:isTrue:inFile:atLine:withDescription:"></A><H3><A NAME="//apple_ref/occ/clm/NSException (SenTestFailure)/failureInCondition:isTrue:inFile:atLine:withDescription:">failureInCondition:isTrue:inFile:atLine:withDescription:</A></H3>
+		<CODE>+ (NSException *)<B>failureInCondition:</B>(NSString *)<EM>condition</EM> <B>isTrue:</B>(BOOL)<EM>isTrue</EM> <B>inFile:</B>(NSString *)<EM>filename</EM> <B>atLine:</B>(int)<EM>lineNumber</EM> <B>withDescription:</B><EM>description</EM>
+			
+		</CODE><P>
+		No method <I>description</I>.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="+ failureInEqualityBetween:and:inFile:atLine:withDescription:"></A><H3><A NAME="//apple_ref/occ/clm/NSException (SenTestFailure)/failureInEqualityBetween:and:inFile:atLine:withDescription:">failureInEqualityBetween:and:inFile:atLine:withDescription:</A></H3>
+		<CODE>+ (NSException *)<B>failureInEqualityBetween:</B>(id)<EM>left</EM> <B>and:</B>(id)<EM>right</EM> <B>inFile:</B>(NSString *)<EM>filename</EM> <B>atLine:</B>(int)<EM>lineNumber</EM> <B>withDescription:</B><EM>description</EM>
+			
+		</CODE><P>
+		No method <I>description</I>.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="+ failureInFile:atLine:withDescription:"></A><H3><A NAME="//apple_ref/occ/clm/NSException (SenTestFailure)/failureInFile:atLine:withDescription:">failureInFile:atLine:withDescription:</A></H3>
+		<CODE>+ (NSException *)<B>failureInFile:</B>(NSString *)<EM>filename</EM> <B>atLine:</B>(int)<EM>lineNumber</EM> <B>withDescription:</B><EM>description</EM>
+			
+		</CODE><P>
+		No method <I>description</I>.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="+ failureInRaise:exception:inFile:atLine:withDescription:"></A><H3><A NAME="//apple_ref/occ/clm/NSException (SenTestFailure)/failureInRaise:exception:inFile:atLine:withDescription:">failureInRaise:exception:inFile:atLine:withDescription:</A></H3>
+		<CODE>+ (NSException *)<B>failureInRaise:</B>(NSString *)<EM>expression</EM> <B>exception:</B>(NSException *)<EM>exception</EM> <B>inFile:</B>(NSString *)<EM>filename</EM> <B>atLine:</B>(int)<EM>lineNumber</EM> <B>withDescription:</B><EM>description</EM>
+			
+		</CODE><P>
+		No method <I>description</I>.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="+ failureInRaise:inFile:atLine:withDescription:"></A><H3><A NAME="//apple_ref/occ/clm/NSException (SenTestFailure)/failureInRaise:inFile:atLine:withDescription:">failureInRaise:inFile:atLine:withDescription:</A></H3>
+		<CODE>+ (NSException *)<B>failureInRaise:</B>(NSString *)<EM>expression</EM> <B>inFile:</B>(NSString *)<EM>filename</EM> <B>atLine:</B>(int)<EM>lineNumber</EM> <B>withDescription:</B><EM>description</EM>
+			
+		</CODE><P>
+		No method <I>description</I>.
+	
+
+
+ 
+
+	<HR WIDTH=50% ALIGN=LEFT>
+	<H2>Instance Methods</H2>
+ 
+	
+		
+		<A NAME="- filePathInProject"></A><H3><A NAME="//apple_ref/occ/instm/NSException (SenTestFailure)/filePathInProject">filePathInProject</A></H3><P>
+		<CODE>- (NSString *)<B>filePathInProject</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- filename"></A><H3><A NAME="//apple_ref/occ/instm/NSException (SenTestFailure)/filename">filename</A></H3><P>
+		<CODE>- (NSString *)<B>filename</B>
+		</CODE><P>
+		No method description.
+	
+		<P><HR WIDTH=25% ALIGN=LEFT>
+		<A NAME="- lineNumber"></A><H3><A NAME="//apple_ref/occ/instm/NSException (SenTestFailure)/lineNumber">lineNumber</A></H3><P>
+		<CODE>- (NSNumber *)<B>lineNumber</B>
+		</CODE><P>
+		No method description.
+	
+
+
+
+
+<P><HR>
+Version 1.4 Copyright &copy;2001 by Sen:te (Sente SA).  All Rights Reserved.  
+<P>
+</BODY></HTML>
