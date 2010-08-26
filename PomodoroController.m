@@ -40,6 +40,8 @@
 
 @synthesize startPomodoro, invalidatePomodoro, interruptPomodoro,  resumePomodoro;
 
+@synthesize tags;
+
 #pragma mark - Shortcut recorder callbacks & support
 
 
@@ -696,6 +698,11 @@
 -(IBAction) removeTag: (id) sender {
 	if ([tagsTable selectedRow] < 0 || [tagsTable selectedRow] >= [tags count])
 		return;
+	
+	if ([[tags objectAtIndex:[tagsTable selectedRow]] length] == 0) {
+		return;
+	}
+	
 	[tags removeObjectAtIndex:[tagsTable selectedRow]];
 	[tagsTable reloadData];
     [self saveTagsToDefaults];	
@@ -715,6 +722,15 @@
     [tags replaceObjectAtIndex:rowIndex withObject:anObject];
     [self saveTagsToDefaults];	
 }
+
+-(NSUInteger)count{
+    return [tags count];
+}
+
+- (id)objectAtIndex:(NSUInteger)index{
+    return [tags objectAtIndex:index];
+}
+
 
 
 #pragma mark ---- Lifecycle methods ----

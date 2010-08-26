@@ -138,7 +138,7 @@
 		
 	[defaultValues setObject:@"Insert here the pomodoro name" forKey:@"pomodoroName"];
 	
-	[defaultValues setObject:[NSArray array] forKey:@"pomodoroTags"];	
+	[defaultValues setObject:[NSArray arrayWithObjects:@"", nil] forKey:@"pomodoroTags"];	
 	
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 

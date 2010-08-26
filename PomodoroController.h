@@ -51,7 +51,7 @@
 @class PomodoroMenuExtra;
 @class PTHotKey;
 
-@interface PomodoroController : NSObject <MGTwitterEngineDelegate, NSTableViewDataSource> {
+@interface PomodoroController : NSArrayController <MGTwitterEngineDelegate, NSTableViewDataSource> {
 
 	ProcessSerialNumber psn;
 	AboutController* about;
@@ -138,6 +138,8 @@
 @property (nonatomic, readonly) NSMenuItem* resumePomodoro;
 
 @property (nonatomic, readonly) NSTableColumn* tagsColumn;
+
+@property (nonatomic, readonly) NSMutableArray* tags;
 
 -(void) pomodoroStarted;
 

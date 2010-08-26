@@ -78,6 +78,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B4068CCE12265EC00043723D /* TagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4068CCD12265EC00043723D /* TagsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -206,6 +207,8 @@
 		69FE31231106626A00A1D711 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../twitter.png; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* pomodoro-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pomodoro-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4068CCC12265EC00043723D /* TagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsController.h; sourceTree = "<group>"; };
+		B4068CCD12265EC00043723D /* TagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +372,8 @@
 				696F5C1B1051D3A30085FA8D /* PomodoroArrayController.m */,
 				696F5BF01051D3A30085FA8D /* AboutController.h */,
 				696F5BF11051D3A30085FA8D /* AboutController.m */,
+				B4068CCC12265EC00043723D /* TagsController.h */,
+				B4068CCD12265EC00043723D /* TagsController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -620,6 +625,7 @@
 				69D16FA31053C1E10051AC93 /* PTHotKeyCenter.m in Sources */,
 				69D16FA41053C1E10051AC93 /* PTKeyCodeTranslator.m in Sources */,
 				69D16FA51053C1E10051AC93 /* PTKeyCombo.m in Sources */,
+				B4068CCE12265EC00043723D /* TagsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
