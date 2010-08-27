@@ -140,6 +140,7 @@
 		B4197A9B1226BB1500B59CCA /* SenTestRun.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A831226BB1500B59CCA /* SenTestRun.m */; };
 		B4197A9C1226BB1500B59CCA /* SenTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A851226BB1500B59CCA /* SenTestSuite.m */; };
 		B4197A9D1226BB1500B59CCA /* SenTestSuiteRun.m in Sources */ = {isa = PBXBuildFile; fileRef = B4197A871226BB1500B59CCA /* SenTestSuiteRun.m */; };
+		B44B5D9E12280AF900AA52A1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B44B5D9D12280AF900AA52A1 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,14 +148,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = B4197A751226BB1500B59CCA /* SenTestingKit.xcode */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* SenTestingKit.framework */;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = SenTestingKit;
 		};
 		B4197AA31226BB1500B59CCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B4197A751226BB1500B59CCA /* SenTestingKit.xcode */;
 			proxyType = 2;
-			remoteGlobalIDString = E98E64A5056D17830033599A /* SenTestingKit_UnitTests.framework */;
+			remoteGlobalIDString = E98E64A5056D17830033599A;
 			remoteInfo = SenTestingKit_UnitTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -357,6 +358,7 @@
 		B4197A861226BB1500B59CCA /* SenTestSuiteRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SenTestSuiteRun.h; path = ../SenTestingKit/SenTestSuiteRun.h; sourceTree = SOURCE_ROOT; };
 		B4197A871226BB1500B59CCA /* SenTestSuiteRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SenTestSuiteRun.m; path = ../SenTestingKit/SenTestSuiteRun.m; sourceTree = SOURCE_ROOT; };
 		B4197AB81226BE4200B59CCA /* PPP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PPP-Info.plist"; sourceTree = "<group>"; };
+		B44B5D9D12280AF900AA52A1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +374,7 @@
 				69FE2FD01105E82700A1D711 /* Sparkle.framework in Frameworks */,
 				69FE30CE1105F11000A1D711 /* BGHUDAppKit.framework in Frameworks */,
 				46D8B63011BF0EBE00F59321 /* Growl.framework in Frameworks */,
+				B44B5D9E12280AF900AA52A1 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +430,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				B44B5D9D12280AF900AA52A1 /* libsqlite3.dylib */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
