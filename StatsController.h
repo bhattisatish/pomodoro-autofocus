@@ -27,20 +27,15 @@
 
 @class PomodoroStats;
 
-@interface StatsController : NSWindowController {
+@interface StatsController : NSWindowController<NSTableViewDataSource> {
 
-	IBOutlet PomodoroStats* pomoStats;
-	IBOutlet NSArrayController* pomos;
-	
-	NSPersistentStoreCoordinator *persistentStoreCoordinator;
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;
-
+	IBOutlet PomodoroStats *pomoStats;
+	IBOutlet NSTableView *pomodorosDoneTableView;
+	NSMutableArray *pomodorosDone;
 }
 
-@property (readonly, nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (readonly, nonatomic, retain) NSArrayController* pomos;
+@property(nonatomic, readonly)NSTableView *pomodorosDoneTableView;
 
 - (IBAction) resetStatistics:(id)sender;
-
+-(void)pomodoro:(NSString *)description with:(NSString *)tag finished:(NSDate *)at;
 @end

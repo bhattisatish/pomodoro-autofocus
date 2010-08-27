@@ -25,104 +25,30 @@
 
 #import "StatsController.h"
 #import "PomodoroStats.h"
+#import "sqlite3.h"
 
 @implementation StatsController
-
-@synthesize pomos;
-
-#pragma mark ---- Core Data support methods ----
-
+@synthesize pomodorosDoneTableView;
 
 - (NSString *)applicationSupportFolder {
-	
+		
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
     return [basePath stringByAppendingPathComponent:@"Pomodoro"];
 }
 
-- (NSManagedObjectModel *)managedObjectModel {
-	
-    if (managedObjectModel != nil) {
-        return managedObjectModel;
-    }
-	
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
-    return managedObjectModel;
+#pragma mark ---- Pomodoros Stats delegate/datasource methods ----
+
+- (int)numberOfRowsInTableView:(NSTableView *)tableView {
+    return [pomodorosDone count];
 }
 
-
-/**
- Returns the persistent store coordinator for the application.  This 
- implementation will create and return a coordinator, having added the 
- store for the application to it.  (The folder for the store is created, 
- if necessary.)
- */
-
-- (NSPersistentStoreCoordinator *) persistentStoreCoordinator {
-	
-    if (persistentStoreCoordinator != nil) {
-        return persistentStoreCoordinator;
-    }
-	
-	NSFileManager *fileManager;
-    NSString *applicationSupportFolder = nil;
-    NSURL *url;
-    NSError *error;
-    
-    fileManager = [NSFileManager defaultManager];
-    applicationSupportFolder = [self applicationSupportFolder];
-    if ( ![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL] ) {
-        [fileManager createDirectoryAtPath:applicationSupportFolder attributes:nil];
-    }
-    
-    url = [NSURL fileURLWithPath: [applicationSupportFolder stringByAppendingPathComponent: @"Pomodoro.sql"]];
-   
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]){
-        [[NSApplication sharedApplication] presentError:error];
-    }    
-	
-    return persistentStoreCoordinator;
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn
+			row:(int)row {
+	id dict = [pomodorosDone objectAtIndex:row];
+	NSString *key = [tableColumn identifier];
+	return [dict valueForKey:key];
 }
-
-
-/**
- Returns the managed object context for the application (which is already
- bound to the persistent store coordinator for the application.) 
- */
-
-- (NSManagedObjectContext *) managedObjectContext {
-	
-    if (managedObjectContext != nil) {
-        return managedObjectContext;
-    }
-	
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [managedObjectContext setPersistentStoreCoordinator: coordinator];
-    }
-    
-    return managedObjectContext;
-}
-
-/*
-#pragma mark ---- Voice combo box delegate/datasource methods ----
-
-- (int)numberOfRowsInTableView:(NSTableView *)tableView
-{
-    //return [pomodoros count];
-	return 0;
-}
-
-- (id)tableView:(NSTableView *)tableView
-objectValueForTableColumn:(NSTableColumn *)tableColumn
-			row:(int)row
-{
-    //return [pomodoros objectAtIndex:row];
-	return nil;
-}
-*/
 
 #pragma mark ---- Business methods ----
 
@@ -134,21 +60,133 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 #pragma mark ---- Lifecycle methods ----
 
-- (id) init {
-	
+- (id) init {	
 	if (![super initWithWindowNibName:@"Stats"]) return nil;
+	pomodorosDone = [[NSMutableArray alloc]init];
 	return self;
 }
 
-- (void)awakeFromNib {
-	
-	NSSortDescriptor* sort = [[NSSortDescriptor alloc] 
-							  initWithKey:@"when" ascending:NO];
-	[pomos setSortDescriptors:
-	 [NSArray arrayWithObject: sort]];
-	[sort release];	
+- (void) dealloc{
+	[pomodorosDone release];
+	[super dealloc];
 }
 
 
+- (void)createDb:(sqlite3 *)database{
+	char *errorMsg;
+	const char *createSql = 
+	"CREATE TABLE IF NOT EXISTS ZPOMODOROS ( Z_PK INTEGER PRIMARY KEY, ZWHEN TIMESTAMP, ZNAME VARCHAR, ZTAG VARCHAR ); CREATE INDEX IF NOT EXISTS ZPOMODOROS_ZWHEN_INDEX ON ZPOMODOROS (ZWHEN);";
+	int result = sqlite3_exec(database, createSql, NULL, NULL, &errorMsg);
+	if(result != SQLITE_OK) {
+		sqlite3_close(database);
+		NSAssert(0, @"Error creating backlog database: %s", errorMsg);
+	}
+}
+
+- (void)migrateDb:(sqlite3 *)database{	
+	char *errorMsg;
+	char *readTagSql = "SELECT ZTAG from ZPOMODOROS;";
+	if(sqlite3_exec(database, readTagSql, NULL, NULL, &errorMsg) == SQLITE_OK)
+		return;
+
+	const char *addColumnSql = "ALTER TABLE ZPOMODOROS	ADD ZTAG VARCHAR;";
+	int result = sqlite3_exec(database, addColumnSql, NULL, NULL, &errorMsg);
+	if(result != SQLITE_OK) {
+		sqlite3_close(database);
+		NSAssert(0, @"Error migrating backlog database: %s", errorMsg);
+	}
+}
+
+- (void)loadData:(sqlite3 *)database{	
+	const char *selectSql = "SELECT ZTAG, ZNAME, ZWHEN FROM ZPOMODOROS ORDER BY ZWHEN DESC;";
+	sqlite3_stmt *statement;
+	
+	int result = sqlite3_prepare_v2(database, selectSql, -1, &statement, nil);
+	if(result != SQLITE_OK) {
+		sqlite3_close(database);
+		NSAssert(0, @"Error loading data from backlog database");
+	}
+
+	[pomodorosDone removeAllObjects];
+	while (sqlite3_step(statement) == SQLITE_ROW) {
+		NSMutableDictionary *dict= [[[NSMutableDictionary alloc]init]autorelease];
+		
+		char *tag = (char *)sqlite3_column_text(statement, 0);
+		if(tag != NULL) {
+			[dict setValue:[NSString stringWithUTF8String:tag] forKey:@"Tag"];
+		} else {
+			[dict setValue:@"" forKey:@"Tag"];
+		}
+
+		char *name = (char *)sqlite3_column_text(statement, 1);
+		[dict setValue:[NSString stringWithUTF8String:name] forKey:@"Description"];
+		int when = sqlite3_column_int(statement, 2);
+		[dict setValue:[NSDate dateWithTimeIntervalSinceReferenceDate:when] forKey:@"DoneAt"];
+				
+		[pomodorosDone addObject:dict];
+	}
+	
+	[pomodorosDoneTableView reloadData];
+}
+
+- (NSString *) databaseName {
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *applicationSupportFolder = [self applicationSupportFolder];
+    if ( ![fileManager fileExistsAtPath:applicationSupportFolder isDirectory:NULL] ) {
+        [fileManager createDirectoryAtPath:applicationSupportFolder attributes:nil];
+    }
+    
+    NSString *databaseName = [applicationSupportFolder stringByAppendingPathComponent: @"Pomodoro.sql"];
+  return databaseName;
+}
+
+- (sqlite3 *) openDatabase {
+  sqlite3 *database;
+  NSString *databaseName = [self databaseName];
+	char *errorMsg;
+	int result = sqlite3_open([databaseName UTF8String], &database);
+	if(result != SQLITE_OK) {
+		NSAssert(0, @"Error opening backlog database: %s", errorMsg);
+	}
+  return database;
+}
+
+
+
+- (void) loadPomodoros {
+	sqlite3 *database;
+	database = [self openDatabase];
+	[self createDb:database];
+	[self migrateDb:database];
+	[self loadData:database];
+	sqlite3_close(database);
+	
+}
+
+-(void)savePomodoro:(NSString *)description with:(NSString *)tag finished:(NSDate *)at database:(sqlite3 *)database {
+	char *sql = "INSERT INTO ZPOMODOROS (ZNAME, ZWHEN, ZTAG) VALUES (?, ?, ?);";
+	sqlite3_stmt *stmt;
+	if (sqlite3_prepare_v2(database, sql, -1, &stmt, nil) == SQLITE_OK) {
+		sqlite3_bind_text(stmt, 1, [description UTF8String], -1, NULL);
+		sqlite3_bind_double(stmt, 2, [at timeIntervalSinceReferenceDate]);
+		sqlite3_bind_text(stmt, 3, [tag UTF8String], -1, NULL);
+	}
+	if (sqlite3_step(stmt) != SQLITE_DONE) {
+		sqlite3_close(database);
+		NSAssert(0, @"Serious problem saving on backlog database");
+	}
+	sqlite3_finalize(stmt);
+}
+
+-(void)pomodoro:(NSString *)description with:(NSString *)tag finished:(NSDate *)at {
+	sqlite3 *database = [self openDatabase];
+	[self savePomodoro:description with:tag finished:at database:database];
+	sqlite3_close(database);
+}
+
+- (void)showWindow:(id)sender {
+	[self loadPomodoros];
+	[super showWindow:sender];
+}
 
 @end

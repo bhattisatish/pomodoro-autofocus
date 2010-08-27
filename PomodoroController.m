@@ -94,6 +94,7 @@
 
 
 - (void) saveState {
+/*
 	NSError *error;
 	if (stats != nil) {
 		if (stats.managedObjectContext != nil) {
@@ -104,6 +105,7 @@
 			}
 		}
 	}
+ */
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }		
 
@@ -552,7 +554,11 @@
 -(void) pomodoroFinished {
 	[self menuReadyToStart];
 	pomoStats.pomodoroDone++;
-	[stats.pomos add:self];
+	
+    NSDate *now = [NSDate date];
+	[stats pomodoro:[[NSUserDefaults standardUserDefaults] objectForKey:@"pomodoroName"] 
+			   with:[[NSUserDefaults standardUserDefaults] objectForKey:@"currentTag"]
+		   finished:now];
 	
 	if (![self checkDefault:@"mute"] && [self checkDefault:@"ringAtEndEnabled"]) {
 		[ringing play];
