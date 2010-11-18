@@ -828,6 +828,7 @@
 	[tick setVolume:_tickVolume/10.0];
 	[speech setVolume:_voiceVolume/10.0];
 
+	[initialTimeCombo addItemWithObjectValue: [NSNumber numberWithInt:15]];
 	[initialTimeCombo addItemWithObjectValue: [NSNumber numberWithInt:25]];
 	[initialTimeCombo addItemWithObjectValue: [NSNumber numberWithInt:30]];
 	[initialTimeCombo addItemWithObjectValue: [NSNumber numberWithInt:35]];
